@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 4507736340639655951}
   - component: {fileID: 657923314781333418}
   - component: {fileID: 3370274225405154144}
-  - component: {fileID: 4108421045845192707}
+  - component: {fileID: 7874765359102244715}
+  - component: {fileID: 8603029294582361309}
   m_Layer: 0
   m_Name: Cannonball
   m_TagString: Untagged
@@ -84,7 +85,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &4108421045845192707
+--- !u!135 &7874765359102244715
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3874611893293445813}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.009999999
+  m_Center: {x: -0.000000003259629, y: -0.0000000032596286, z: -2.3161057e-23}
+--- !u!114 &8603029294582361309
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

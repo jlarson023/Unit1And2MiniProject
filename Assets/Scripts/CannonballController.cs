@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CannonballMove : MonoBehaviour
+public class CannonballController : MonoBehaviour
 {
     public float moveSpeed;
 
@@ -24,6 +24,15 @@ public class CannonballMove : MonoBehaviour
     {
         yield return new WaitForSeconds(numSeconds);
         Destroy(gameObject);
+    }
+    //Destroy cannonball and enemy on collision
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(gameObject);
+            Destroy(collision.gameObject);
+        }
     }
 
 }

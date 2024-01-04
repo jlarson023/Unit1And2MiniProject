@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public float rotationSpeed;
     private float xRange = 21.0f;
     private float zRange = 19.0f;
+    private float yMax = 2.0f;
 
     
     // Start is called before the first frame update
@@ -30,22 +31,30 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.Rotate(Vector3.forward, horizontalInput * rotationSpeed * Time.deltaTime);
         }
-
+        //top bound
         if(transform.position.z > zRange)
         {
             transform.position = new Vector3(transform.position.x, transform.position.y, zRange);
         }
+        //bottom bound
         if (transform.position.z < -zRange)
         {
             transform.position = new Vector3(transform.position.x, transform.position.y, -zRange);
         }
+        //right bound
         if (transform.position.x > xRange)
         {
             transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
         }
+        //left bound
         if (transform.position.x < -xRange)
         {
             transform.position = new Vector3(-xRange, transform.position.y, transform.position.z);
+        }
+        //height bound
+        if (transform.position.y > yMax)
+        {
+            transform.position = new Vector3(transform.position.x, yMax, transform.position.z);
         }
     }
 }
